@@ -3,9 +3,9 @@ struct User {
     let age: Int?
 }
 
-let json: AnyObject = ["name": "Rui", "age" : 13] as AnyObject!
+let json: AnyObject = ["name": "Rui"] as AnyObject!
 
 let u = curry(User.init)
         <^> (json <| "name")
-        <*> (json <| "age")
+        <*> (json <|? "age")
 

@@ -13,3 +13,4 @@ precedencegroup FooBarDecodePrecedence {
 infix operator <^> : RunesApplicativePrecedence
 infix operator <*> : RunesApplicativePrecedence
 infix operator <| : FooBarDecodePrecedence
+infix operator <|? : FooBarDecodePrecedence

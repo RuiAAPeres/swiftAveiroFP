@@ -8,4 +8,11 @@ public  enum ParsingResult<T> {
         case .failure: return nil
         }
     }
+
+    public func toOptional() -> ParsingResult<T?> {
+        switch self {
+        case .success(let v): return .success(.some(v))
+        case .failure: return .success(.none)
+        }
+    }
 }
