@@ -1,3 +1,5 @@
+// From here: https://github.com/thoughtbot/runes
+
 precedencegroup RunesApplicativePrecedence {
     associativity: left
     higherThan: LogicalConjunctionPrecedence
@@ -14,3 +16,4 @@ infix operator <^> : RunesApplicativePrecedence
 infix operator <*> : RunesApplicativePrecedence
 infix operator <| : FooBarDecodePrecedence
 infix operator <|? : FooBarDecodePrecedence
+infix operator <|| : FooBarDecodePrecedence

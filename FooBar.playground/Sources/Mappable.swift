@@ -1,7 +1,7 @@
 public typealias JSON = AnyObject
 
 public protocol Mappable {
-    func decode(_ json: JSON) -> ParsingResult<Self>
+    static func decode(_ json: JSON) -> ParsingResult<Self>
 }
 
 public func <| <T>(json: JSON, key: String) -> ParsingResult<T> {
